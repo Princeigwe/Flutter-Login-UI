@@ -31,6 +31,15 @@ class _HomeState extends State<Home> {
     }
   }
 
+  bool _obsureText = true;
+
+  //toggle function to show password or not
+  void _toggle() {
+    setState(() {
+      _obsureText = !_obsureText;
+    });
+  }
+
   void _opensignup({BuildContext context, bool fullScreenDialog = false}) {
     Navigator.push(
         context,
@@ -117,6 +126,14 @@ class _HomeState extends State<Home> {
                                 suffixIcon: Icon(Icons.visibility_outlined)),
                             validator: (value) => _validatepassword(value),
                             onSaved: (value) => Login().password = value,
+                            // hidind character is set to true
+                            obscureText: _obsureText,
+                          ),
+                          new FlatButton(
+                            //button is linked to toggle function
+                            onPressed: () => _toggle(), 
+                            child: new Text(_obsureText ? "Show" : "Hide", 
+                              style: TextStyle(color: Colors.blueGrey),)
                           ),
                           //Divider(height: 32.0,),
                           Padding(
