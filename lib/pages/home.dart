@@ -56,20 +56,20 @@ class _HomeState extends State<Home> {
                   Row(
                     children: [
                       Padding(
-                          padding: EdgeInsets.all(16.0),
-                          child: Text(
+                        padding: EdgeInsets.all(16.0),
+                        child: Text(
                           "Login",
                           style: TextStyle(
                               fontSize: 30.0, fontWeight: FontWeight.bold),
                         ),
-                          )
+                      )
                     ],
                   ),
                   Row(
                     children: [
                       Padding(
-                        padding: EdgeInsets.all(16.0),
-                        child: FlatButton(
+                          padding: EdgeInsets.all(16.0),
+                          child: FlatButton(
                             onPressed: () => _opensignup(
                                 context: context, fullScreenDialog: true),
                             child: Text(
@@ -79,8 +79,7 @@ class _HomeState extends State<Home> {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                          )
-                      )
+                          ))
                     ],
                   )
                 ],
@@ -101,66 +100,65 @@ class _HomeState extends State<Home> {
               ),
               Container(
                 child: Form(
-                  key: _formStateKey,
-                  autovalidateMode: AutovalidateMode.always,
-                  child: Padding(
-                    padding: EdgeInsets.all(40.0),
-                    child: Column(
-                      children: [
-                        TextFormField(
-                          decoration: InputDecoration(
-                            hintText: 'Username'
+                    key: _formStateKey,
+                    autovalidateMode: AutovalidateMode.always,
+                    child: Padding(
+                      padding: EdgeInsets.all(40.0),
+                      child: Column(
+                        children: [
+                          TextFormField(
+                            decoration: InputDecoration(hintText: 'Username'),
+                            validator: (value) => _validateusername(value),
+                            onSaved: (value) => Login().username = value,
                           ),
-                          validator: (value) => _validateusername(value),
-                          onSaved: (value) => Login().username = value,
-                        ),
-                        TextFormField(
-                          decoration: InputDecoration(
-                            hintText: 'Password',
-                            suffixIcon: Icon(Icons.visibility_outlined)
+                          TextFormField(
+                            decoration: InputDecoration(
+                                hintText: 'Password',
+                                suffixIcon: Icon(Icons.visibility_outlined)),
+                            validator: (value) => _validatepassword(value),
+                            onSaved: (value) => Login().password = value,
                           ),
-                          validator: (value) => _validatepassword(value),
-                          onSaved: (value) => Login().password = value,
-                        ),
-                        //Divider(height: 32.0,),
-                        Padding(
-                          padding: EdgeInsets.all(60.0),
-                            // overriding raised button height and width with button theme
-                            child: ButtonTheme(
-                              minWidth: 100.0,
-                              height: 50.0,
-                              child: RaisedButton(
-                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18.0)),
-                              
-                                color: Colors.white,
-                                onPressed: () => _submitOrder(),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Icon(Icons.check, color: Colors.blueAccent,),
-                                    Text(
-                                      'Log In',
-                                      style: TextStyle(color: Colors.blueAccent),
-                                    )
-                                  ],
+                          //Divider(height: 32.0,),
+                          Padding(
+                              padding: EdgeInsets.all(60.0),
+                              // overriding raised button height and width with button theme
+                              child: ButtonTheme(
+                                minWidth: 100.0,
+                                height: 50.0,
+                                child: RaisedButton(
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadius.circular(18.0)),
+                                  color: Colors.white,
+                                  onPressed: () => _submitOrder(),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Icon(
+                                        Icons.check,
+                                        color: Colors.blueAccent,
+                                      ),
+                                      Text(
+                                        'Log In',
+                                        style:
+                                            TextStyle(color: Colors.blueAccent),
+                                      )
+                                    ],
+                                  ),
                                 ),
-                              ) ,
-                            )
-                        )
-                      ],
-                    ),
-                  )
-                ),
+                              ))
+                        ],
+                      ),
+                    )),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     "Login with",
-                    style: TextStyle(
-                      color: Colors.blueGrey
-                    ),
+                    style: TextStyle(color: Colors.blueGrey),
                   )
                 ],
               ),
@@ -175,7 +173,7 @@ class _HomeState extends State<Home> {
                     CircleAvatar(),
                     CircleAvatar(),
                   ],
-              ),
+                ),
               )
             ],
           ),
