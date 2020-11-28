@@ -75,9 +75,9 @@ class _HomeState extends State<Home> {
                             child: Text(
                               "Sign Up",
                               style: TextStyle(
-                                fontSize: 15.0,
-                                fontWeight: FontWeight.bold,
-                              ),
+                                  fontSize: 15.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.blueGrey),
                             ),
                           ))
                     ],
