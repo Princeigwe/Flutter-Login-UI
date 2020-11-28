@@ -141,7 +141,7 @@ class _HomeState extends State<Home> {
                                         color: Colors.blueAccent,
                                       ),
                                       Text(
-                                        'Log In',
+                                        'LOG IN',
                                         style:
                                             TextStyle(color: Colors.blueAccent),
                                       )
