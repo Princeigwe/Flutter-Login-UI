@@ -181,32 +181,32 @@ class _HomeState extends State<Home> {
                       shape: CircleBorder(),
                     ),
                     RawMaterialButton(
-                        onPressed: () {},
-                        child: Image(
-                          image: AssetImage('assets/images/github.png'),
-                          height: 30.0,
-                          width: 30.0,
-                        ),
-                        shape: CircleBorder(),
+                      onPressed: () {},
+                      child: Image(
+                        image: AssetImage('assets/images/github.png'),
+                        height: 30.0,
+                        width: 30.0,
                       ),
+                      shape: CircleBorder(),
+                    ),
                     RawMaterialButton(
-                        onPressed: () {},
-                        child: Image(
-                          image: AssetImage('assets/images/twitter.png'),
-                          height: 30.0,
-                          width: 30.0,
-                        ),
-                        shape: CircleBorder(),
+                      onPressed: () {},
+                      child: Image(
+                        image: AssetImage('assets/images/twitter.png'),
+                        height: 30.0,
+                        width: 30.0,
                       ),
+                      shape: CircleBorder(),
+                    ),
                     RawMaterialButton(
-                        onPressed: () {},
-                        child: Image(
-                          image: AssetImage('assets/images/Facebook.png'),
-                          height: 30.0,
-                          width: 30.0,
-                        ),
-                        shape: CircleBorder(),
+                      onPressed: () {},
+                      child: Image(
+                        image: AssetImage('assets/images/Facebook.png'),
+                        height: 30.0,
+                        width: 30.0,
                       ),
+                      shape: CircleBorder(),
+                    ),
                   ],
                 ),
               )
