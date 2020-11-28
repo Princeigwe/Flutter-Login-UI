@@ -156,22 +156,57 @@ class _HomeState extends State<Home> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    "Login with",
-                    style: TextStyle(color: Colors.blueGrey),
+                  Padding(
+                    padding: EdgeInsets.all(16.0),
+                    child: Text(
+                      "Login with",
+                      style: TextStyle(color: Colors.blueGrey),
+                    ),
                   )
                 ],
               ),
               Padding(
-                padding: EdgeInsets.all(30.0),
+                padding: EdgeInsets.all(5.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   mainAxisSize: MainAxisSize.max,
                   children: [
-                    CircleAvatar(),
-                    CircleAvatar(),
-                    CircleAvatar(),
-                    CircleAvatar(),
+                    RawMaterialButton(
+                      onPressed: () {},
+                      child: Image(
+                        image: AssetImage('assets/images/google icon.png'),
+                        height: 30.0,
+                        width: 30.0,
+                      ),
+                      shape: CircleBorder(),
+                    ),
+                    RawMaterialButton(
+                        onPressed: () {},
+                        child: Image(
+                          image: AssetImage('assets/images/github.png'),
+                          height: 30.0,
+                          width: 30.0,
+                        ),
+                        shape: CircleBorder(),
+                      ),
+                    RawMaterialButton(
+                        onPressed: () {},
+                        child: Image(
+                          image: AssetImage('assets/images/twitter.png'),
+                          height: 30.0,
+                          width: 30.0,
+                        ),
+                        shape: CircleBorder(),
+                      ),
+                    RawMaterialButton(
+                        onPressed: () {},
+                        child: Image(
+                          image: AssetImage('assets/images/Facebook.png'),
+                          height: 30.0,
+                          width: 30.0,
+                        ),
+                        shape: CircleBorder(),
+                      ),
                   ],
                 ),
               )
